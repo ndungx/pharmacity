@@ -13,15 +13,17 @@ class Body extends StatefulWidget {
 
 class _BodyState extends State<Body> {
   int currentPage = 0;
-  final List<Map<String, Object>> _introductionData = [
+  final List<Map<String, dynamic>> _introductionData = [
     {
       "image": "assets/images/intro_1.png",
       "title": "",
       "text": RichText(
+        textAlign: TextAlign.center,
         text: const TextSpan(
           style: TextStyle(
             fontSize: 12,
             color: Colors.white,
+            height: 1.5,
           ),
           children: [
             TextSpan(
@@ -44,18 +46,14 @@ class _BodyState extends State<Body> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            TextSpan(
-              text: 'tham gia chương trình ',
-            ),
+            TextSpan(text: 'tham gia chương trình '),
             TextSpan(
               text: '"Tải ứng dụng, rinh quà khủng" ',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
               ),
             ),
-            TextSpan(
-              text: 'có cơ hội ',
-            ),
+            TextSpan(text: 'có cơ hội '),
             TextSpan(
               text: 'trúng Smart TV ',
               style: TextStyle(
@@ -70,20 +68,50 @@ class _BodyState extends State<Body> {
     {
       "image": "assets/images/intro_2.png",
       "title": "Nhà Thuốc trực tuyến siêu tiện lợi",
-      "text":
-          'Ngập tràn ưu đãi khủng, miễn phí vận chuyển từ 300k. Tích lũy điểm Extracare sau mỗi lần mua sắm.',
+      "text": RichText(
+        textAlign: TextAlign.center,
+        text: const TextSpan(
+          style: TextStyle(
+            fontSize: 12,
+            color: Colors.white,
+            height: 1.5,
+          ),
+          text:
+              'Ngập tràn ưu đãi khủng, miễn phí vận chuyển từ 300k. Tích lũy điểm Extracare sau mỗi lần mua sắm.',
+        ),
+      ),
     },
     {
       "image": "assets/images/intro_3.png",
       "title": "Tư vấn cùng dược sĩ trực tuyến qua video.",
-      "text":
-          'Tư vấn đơn thuốc và cách sử dụng thuốc từ đội ngũ dược sĩ chuyên môn cao.'
+      "text": RichText(
+        textAlign: TextAlign.center,
+        text: const TextSpan(
+          style: TextStyle(
+            fontSize: 12,
+            color: Colors.white,
+            height: 1.5,
+          ),
+          text:
+              'Tư vấn đơn thuốc và cách sử dụng thuốc từ đội ngũ dược sĩ chuyên môn cao.',
+        ),
+      ),
     },
     {
       "title": "Tra cứu thông tin thuốc và triệu chứng bệnh",
       "image": "assets/images/intro_4.png",
-      "text":
-          'Cập nhật các thông tin sức khỏe mới nhất, tra cứu thông tin nhanh chóng và chính xác.',
+      "text": RichText(
+        textAlign: TextAlign.center,
+        text: const TextSpan(
+          style: TextStyle(
+            fontSize: 12,
+            color: Colors.white,
+            height: 1.5,
+          ),
+          text:
+              'Cập nhật các thông tin sức khỏe mới nhất, tra cứu thông tin nhanh chóng và chính xác.',
+        ),
+      ),
     },
   ];
 
@@ -116,7 +144,7 @@ class _BodyState extends State<Body> {
                     itemBuilder: (context, index) => IntroductionContent(
                       image: _introductionData[index]['image'].toString(),
                       title: _introductionData[index]['title'].toString(),
-                      text: _introductionData[index]['text'].toString(),
+                      text: _introductionData[index]['text'],
                     ),
                   ),
                 ),
@@ -137,7 +165,7 @@ class _BodyState extends State<Body> {
                         DefaultButton(
                           text: 'Continue',
                           backgroundColor: Colors.white,
-                          textColor: const Color(0xFF1562F9),
+                          textColor: kPrimaryColor,
                           press: () {
                             Navigator.push(
                               context,

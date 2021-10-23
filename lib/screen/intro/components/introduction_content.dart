@@ -4,7 +4,8 @@ class IntroductionContent extends StatelessWidget {
   const IntroductionContent({Key? key, this.title, this.text, this.image})
       : super(key: key);
 
-  final String? title, text, image;
+  final String? title, image;
+  final RichText? text;
 
   @override
   Widget build(BuildContext context) {
@@ -30,15 +31,10 @@ class IntroductionContent extends StatelessWidget {
             ),
           ),
         ),
-        const Padding(padding: EdgeInsets.only(top: 20)),
-        Text(
-          text!,
-          textAlign: TextAlign.center,
-          style: const TextStyle(
-            fontSize: 12,
-            color: Colors.white,
-            height: 1.5,
-          ),
+        const SizedBox(height: 20),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: text!,
         ),
       ],
     );
