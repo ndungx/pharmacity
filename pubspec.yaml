@@ -41,6 +41,10 @@ dependencies:
 
   convex_bottom_bar: ^3.0.0
 
+  otp_text_field: ^1.1.1
+
+  timer_count_down: ^2.2.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -75,6 +79,11 @@ flutter:
     - assets/images/intro_3.png
     - assets/images/intro_4.png
     - assets/images/intro_5.png
+    - assets/images/extra_care_logo_colorless.png
+    - assets/images/extra_care_logo_colored.png
+    - assets/images/pharmacity_model.png
+    - assets/images/pharmacity_logo.png
+    - assets/images/pharmacity_mascot.png
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
