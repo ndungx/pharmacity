@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pharmacity/components/default_button.dart';
+import 'package:pharmacity/constants.dart';
 import 'package:pharmacity/screen/accept_terms/components/term_content.dart';
 import 'package:pharmacity/screen/login/login_screen.dart';
 
@@ -39,14 +40,14 @@ class _CheckTermState extends State<CheckTerm> {
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
-                    color: Color(0xFF1062F9),
+                    color: kPrimaryColor,
                   ),
                 ),
                 content: const TermContent(),
                 actions: <Widget>[
                   DefaultButton(
                     text: 'Tôi đồng ý',
-                    backgroundColor: const Color(0xFF5DAC46),
+                    backgroundColor: kSuccessColor,
                     textColor: Colors.white,
                     press: () {
                       setState(() {
@@ -63,21 +64,15 @@ class _CheckTermState extends State<CheckTerm> {
             padding: const EdgeInsets.symmetric(vertical: 16),
             child: Row(
               children: [
-                _accepted
-                    ? const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 6),
-                        child: Icon(
-                          Icons.check_box_rounded,
-                          color: Colors.white,
-                        ),
-                      )
-                    : const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 6),
-                        child: Icon(
-                          Icons.check_box_outline_blank_rounded,
-                          color: Colors.white,
-                        ),
-                      ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 6),
+                  child: Icon(
+                    _accepted
+                        ? Icons.check_box_rounded
+                        : Icons.check_box_outline_blank_rounded,
+                    color: Colors.white,
+                  ),
+                ),
                 Expanded(
                   child: RichText(
                     text: const TextSpan(
@@ -130,7 +125,7 @@ class _CheckTermState extends State<CheckTerm> {
                       text: 'Continue',
                       enabled: false,
                       backgroundColor: const Color(0x3DFFFFFF),
-                      textColor: const Color(0xFF1562F9),
+                      textColor: kPrimaryColor,
                       press: () => null,
                     )
             ],

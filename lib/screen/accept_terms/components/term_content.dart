@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pharmacity/constants.dart';
 
 class TermContent extends StatelessWidget {
   const TermContent({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class TermContent extends StatelessWidget {
             'Điều khoản sử dụng',
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: Color(0xFF5DAC46),
+              color: kSuccessColor,
             ),
           ),
           Padding(
