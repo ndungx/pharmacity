@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pharmacity/components/default_button.dart';
 import 'package:pharmacity/constants.dart';
+import 'package:pharmacity/preferences_service.dart';
 import 'package:pharmacity/screen/accept_terms/components/term_content.dart';
 import 'package:pharmacity/screen/login/login_screen.dart';
 
@@ -12,6 +13,8 @@ class CheckTerm extends StatefulWidget {
 }
 
 class _CheckTermState extends State<CheckTerm> {
+  final _prefs = PreferencesSerice();
+
   late bool _accepted;
 
   @override
@@ -108,10 +111,11 @@ class _CheckTermState extends State<CheckTerm> {
             children: [
               _accepted
                   ? DefaultButton(
-                      text: 'Continue',
+                      text: 'Tiếp tục',
                       backgroundColor: Colors.white,
                       textColor: const Color(0xFF1562F9),
                       press: () {
+                        _prefs.setFirstTime(!_accepted);
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
@@ -121,12 +125,10 @@ class _CheckTermState extends State<CheckTerm> {
                         );
                       },
                     )
-                  : DefaultButton(
-                      text: 'Continue',
-                      enabled: false,
-                      backgroundColor: const Color(0x3DFFFFFF),
+                  : const DefaultButton(
+                      text: 'Tiếp tục',
+                      backgroundColor: Color(0x3DFFFFFF),
                       textColor: kPrimaryColor,
-                      press: () => null,
                     )
             ],
           ),
