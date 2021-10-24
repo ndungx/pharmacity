@@ -163,7 +163,7 @@ class _BodyState extends State<Body> {
                         ),
                         const Padding(padding: EdgeInsets.only(top: 25)),
                         DefaultButton(
-                          text: 'Continue',
+                          text: 'Tiếp tục',
                           backgroundColor: Colors.white,
                           textColor: kPrimaryColor,
                           press: () {
