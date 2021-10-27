@@ -8,30 +8,38 @@ class DefaultButton extends StatelessWidget {
     this.textColor,
     this.backgroundColor,
     this.enabled = true,
+    this.textStyle,
+    this.height,
   }) : super(key: key);
 
   final String text;
   final Function? press;
   final Color? textColor, backgroundColor;
   final bool enabled;
+  final TextStyle? textStyle;
+  final double? height;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 40,
-      child: TextButton(
-        style: TextButton.styleFrom(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-          primary: backgroundColor,
-          backgroundColor: backgroundColor,
-        ),
-        onPressed: enabled ? press as void Function()? : null,
-        child: Text(
-          text,
-          style: TextStyle(
-            fontSize: 16,
-            color: textColor,
+      height: height ?? 40,
+      child: Material(
+        color: backgroundColor,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+        child: InkWell(
+          onTap: enabled ? press as void Function()? : null,
+          splashColor: Colors.white.withOpacity(.3),
+          radius: 8,
+          child: Center(
+            child: Text(
+              text,
+              style: textStyle ??
+                  TextStyle(
+                    fontSize: 16,
+                    color: textColor,
+                  ),
+            ),
           ),
         ),
       ),
