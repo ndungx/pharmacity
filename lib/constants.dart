@@ -5,6 +5,7 @@ const kPrimaryDarkColor = Color(0xFF001943);
 const kSecondaryColor = Color(0xFFCECECE);
 const kSuccessColor = Color(0xFF5CAB45);
 const kAnimationDuration = Duration(milliseconds: 200);
+const kConvexBarHeight = 50.0;
 
 // Form errors
 final RegExp phoneValidatorRegExp = RegExp(
