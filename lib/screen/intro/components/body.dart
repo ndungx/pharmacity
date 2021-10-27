@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pharmacity/components/default_button.dart';
 import 'package:pharmacity/screen/accept_terms/accept_terms_screen.dart';
-import '../../../constants.dart';
+import 'package:pharmacity/constants.dart';
 import 'introduction_content.dart';
 
 class Body extends StatefulWidget {
