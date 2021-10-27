@@ -47,6 +47,10 @@ dependencies:
 
   shared_preferences: ^2.0.8
 
+  carousel_slider: ^4.0.0
+
+  simple_currency_format: ^1.0.5
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -86,6 +90,8 @@ flutter:
     - assets/images/pharmacity_model.png
     - assets/images/pharmacity_logo.png
     - assets/images/pharmacity_mascot.png
+    - assets/images/pharmacity_store.png
+    - assets/images/globe.png
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
