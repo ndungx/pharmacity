@@ -99,6 +99,7 @@ class ProductCard extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8),
                             child: Container(
                               color: kPrimaryColor.withOpacity(.2),
+                              width: 145,
                               child: Padding(
                                 padding: const EdgeInsets.all(5),
                                 child: Row(
