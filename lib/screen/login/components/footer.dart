@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pharmacity/constants.dart';
+import 'package:pharmacity/screen/home/home.dart';
 import 'package:pharmacity/screen/register/register_screen.dart';
 
 class Footer extends StatelessWidget {
@@ -47,7 +48,7 @@ class Footer extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         GestureDetector(
-          onTap: () {},
+          onTap: () => Navigator.pushReplacementNamed(context, Home.routeName),
           child: const Text(
             'Mua sắm không cần đăng nhập',
             style: TextStyle(
