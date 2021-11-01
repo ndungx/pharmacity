@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pharmacity/constants.dart';
+import 'package:pharmacity/screen/pharmacity_location.dart/pharmacity_location_screen.dart';
 
 class PharmarcityLocationButton extends StatelessWidget {
   const PharmarcityLocationButton({Key? key}) : super(key: key);
@@ -8,12 +9,7 @@ class PharmarcityLocationButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(
-        //     builder: (context) => PharmarcityLocationPage(),
-        //   ),
-        // );
+        Navigator.pushNamed(context, PharmacityLocationScreen.routeName);
       },
       child: SizedBox(
         width: double.infinity,
@@ -38,12 +34,10 @@ class PharmarcityLocationButton extends StatelessWidget {
                       color: kPrimaryColor,
                       child: InkWell(
                         onTap: () {
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //     builder: (context) => PharmarcityLocationPage(),
-                          //   ),
-                          // );
+                          Navigator.pushNamed(
+                            context,
+                            PharmacityLocationScreen.routeName,
+                          );
                         },
                         child: Container(
                           alignment: Alignment.topRight,

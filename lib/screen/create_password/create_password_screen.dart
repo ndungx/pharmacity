@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import '../../../constants.dart';
+import 'package:pharmacity/constants.dart';
 import 'components/body.dart';
 
-class CreatePassword extends StatelessWidget {
-  const CreatePassword({Key? key}) : super(key: key);
+class CreatePasswordScreen extends StatelessWidget {
+  const CreatePasswordScreen({Key? key}) : super(key: key);
+
+  static String routeName = "/create_password";
 
   @override
   Widget build(BuildContext context) {

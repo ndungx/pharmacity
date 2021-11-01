@@ -8,14 +8,7 @@ class CreatePasswordBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const CreatePassword(),
-          ),
-        );
-      },
+      onTap: () => Navigator.pushNamed(context, CreatePasswordScreen.routeName),
       child: Container(
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(

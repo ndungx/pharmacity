@@ -62,7 +62,10 @@ class Body extends StatelessWidget {
                             ),
                             const SizedBox(width: 4),
                             GestureDetector(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.pop(context);
+                                Navigator.pushNamed(context, '/register');
+                              },
                               child: const Text(
                                 'Đăng ký ngay',
                                 style: TextStyle(
