@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pharmacity/components/default_button.dart';
-import 'package:pharmacity/components/unordered_list.dart';
 import 'package:pharmacity/constants.dart';
 
 class Body extends StatefulWidget {
