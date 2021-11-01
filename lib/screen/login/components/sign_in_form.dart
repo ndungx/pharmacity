@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pharmacity/components/default_button.dart';
 import 'package:pharmacity/components/form_error.dart';
 import 'package:pharmacity/screen/forgot_password/forgot_password_screen.dart';
+import 'package:pharmacity/screen/home/home.dart';
 import 'package:pharmacity/utils/keyboard.dart';
 
 import '../../../constants.dart';
@@ -91,14 +92,7 @@ class _SignInFormState extends State<SignInForm> {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
                   KeyboardUtil.hideKeyboard(context);
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (BuildContext _context) {
-                        return const ForgotPasswordScreen();
-                      },
-                    ),
-                  );
+                  Navigator.pushNamed(context, Home.routeName);
                 }
               },
             )
