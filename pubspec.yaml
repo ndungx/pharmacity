@@ -35,7 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
 
-  # provider: ^6.0.1
+  provider: ^6.0.1
 
   page_transition: ^2.0.4
 
@@ -50,6 +50,8 @@ dependencies:
   carousel_slider: ^4.0.0
 
   simple_currency_format: ^1.0.5
+
+  flutter_svg: ^0.23.0+1
 
 dev_dependencies:
   flutter_test:
@@ -92,6 +94,25 @@ flutter:
     - assets/images/pharmacity_mascot.png
     - assets/images/pharmacity_store.png
     - assets/images/globe.png
+    - assets/images/research_disease_banner.png
+
+    - assets/icons/search.svg
+    - assets/icons/cart.svg
+    - assets/icons/floating_button_cart.svg
+    - assets/icons/home.svg
+    - assets/icons/product_catalog.svg
+    - assets/icons/purchase_order.svg
+    - assets/icons/user.svg
+    - assets/icons/earn_points.svg
+    - assets/icons/free_ship.svg
+    - assets/icons/good_medicine_cheap_price.svg
+    - assets/icons/nearby_pharmacy.svg
+    - assets/icons/all_products.svg
+    - assets/icons/cart_empty.svg
+    - assets/icons/counselor.svg
+    - assets/icons/selected_category.svg
+    - assets/icons/search_not_found.svg
+    - assets/icons/order.svg
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
