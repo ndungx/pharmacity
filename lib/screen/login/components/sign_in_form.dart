@@ -60,12 +60,9 @@ class _SignInFormState extends State<SignInForm> {
             SizedBox(
               width: double.infinity,
               child: GestureDetector(
-                onTap: () => Navigator.push(
+                onTap: () => Navigator.pushNamed(
                   context,
-                  MaterialPageRoute(
-                    builder: (BuildContext _context) =>
-                        const ForgotPasswordScreen(),
-                  ),
+                  ForgotPasswordScreen.routeName,
                 ),
                 child: const Text(
                   'Quên mật khẩu?',

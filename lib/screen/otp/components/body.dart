@@ -7,7 +7,9 @@ import 'count_down.dart';
 import 'hide_phone_number.dart';
 
 class Body extends StatefulWidget {
-  const Body({Key? key}) : super(key: key);
+  const Body({Key? key, required this.phoneNumber}) : super(key: key);
+
+  final String phoneNumber;
 
   @override
   State<Body> createState() => _BodyState();
@@ -55,8 +57,8 @@ class _BodyState extends State<Body> {
                       ),
                       const SizedBox(height: 20),
                       Row(
-                        children: const [
-                          Text(
+                        children: [
+                          const Text(
                             'Nhập 4 chữ số mà Pharmacity đã gửi qua số điện thoại ',
                             style: TextStyle(
                                 fontSize: 12,
@@ -64,7 +66,7 @@ class _BodyState extends State<Body> {
                                 fontWeight: FontWeight.w500),
                           ),
                           HidePhoneNumber(
-                            phoneNumber: '0987654321',
+                            phoneNumber: widget.phoneNumber,
                             fontSize: 12,
                             fontWeight: FontWeight.w500,
                             textColor: kPrimaryColor,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pharmacity/components/phone_form.dart';
 import 'package:pharmacity/constants.dart';
-import '../../../../components/phone_form.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -19,7 +19,7 @@ class Body extends StatelessWidget {
               child: Container(
                 width: double.infinity,
                 height: MediaQuery.of(context).size.height -
-                    24 -
+                    50 -
                     AppBar().preferredSize.height,
                 color: Colors.white,
                 alignment: Alignment.topLeft,
@@ -44,7 +44,9 @@ class Body extends StatelessWidget {
                             fontWeight: FontWeight.w500),
                       ),
                       const Expanded(
-                          flex: 3, child: Center(child: PhoneForm())),
+                        flex: 3,
+                        child: Center(child: PhoneForm()),
+                      ),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 50),
                         child: Row(
@@ -59,7 +61,10 @@ class Body extends StatelessWidget {
                             ),
                             const SizedBox(width: 4),
                             GestureDetector(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.pushReplacementNamed(
+                                    context, '/register');
+                              },
                               child: const Text(
                                 'Đăng ký ngay',
                                 style: TextStyle(

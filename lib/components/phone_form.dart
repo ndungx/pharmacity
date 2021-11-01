@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pharmacity/components/default_button.dart';
 import 'package:pharmacity/components/form_error.dart';
 import 'package:pharmacity/constants.dart';
-import 'package:pharmacity/screen/otp/otp_forgot_password.dart';
+import 'package:pharmacity/screen/otp/otp_forgot_password_screen.dart';
 import 'package:pharmacity/utils/keyboard.dart';
 
 class PhoneForm extends StatefulWidget {
@@ -15,7 +15,6 @@ class PhoneForm extends StatefulWidget {
 class _PhoneFormState extends State<PhoneForm> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   String? phoneNumber;
-  String? password;
   final textFieldFocusNode = FocusNode();
   final List<String?> errors = [];
 
@@ -55,10 +54,11 @@ class _PhoneFormState extends State<PhoneForm> {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
                 KeyboardUtil.hideKeyboard(context);
-                Navigator.push(
+                Navigator.pushNamed(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const OTPForgotPassword(),
+                  OTPForgotPasswordScreen.routeName,
+                  arguments: OTPForgotPasswordScreenArguments(
+                    phoneNumber: phoneNumber!,
                   ),
                 );
               }

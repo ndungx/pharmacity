@@ -27,12 +27,7 @@ class Footer extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const RegisterScreen(),
-                  ),
-                );
+                Navigator.pushNamed(context, RegisterScreen.routeName);
               },
               child: const Text(
                 'Đăng ký ngay',

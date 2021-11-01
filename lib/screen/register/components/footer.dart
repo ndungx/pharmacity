@@ -13,7 +13,7 @@ class Footer extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              'Bạn chưa có tài khoản ExtraCare?',
+              'Bạn đã có tài khoản ExtraCare?',
               style: TextStyle(
                 color: kPrimaryDarkColor,
                 fontWeight: FontWeight.w500,
@@ -28,7 +28,7 @@ class Footer extends StatelessWidget {
                 Navigator.pop(context);
               },
               child: const Text(
-                'Đăng ký ngay',
+                'Đăng nhập ngay',
                 style: TextStyle(
                   color: kPrimaryColor,
                   fontSize: 12,
@@ -41,7 +41,10 @@ class Footer extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            Navigator.pop(context);
+            Navigator.pushReplacementNamed(context, '/home');
+          },
           child: const Text(
             'Mua sắm không cần đăng nhập',
             style: TextStyle(
