@@ -10,6 +10,7 @@ class DefaultButton extends StatelessWidget {
     this.enabled = true,
     this.textStyle,
     this.height,
+    this.borderRadius,
   }) : super(key: key);
 
   final String text;
@@ -18,6 +19,7 @@ class DefaultButton extends StatelessWidget {
   final bool enabled;
   final TextStyle? textStyle;
   final double? height;
+  final double? borderRadius;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +28,9 @@ class DefaultButton extends StatelessWidget {
       height: height ?? 40,
       child: Material(
         color: backgroundColor,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(borderRadius ?? 8),
+        ),
         child: InkWell(
           onTap: enabled ? press as void Function()? : null,
           splashColor: Colors.white.withOpacity(.3),
