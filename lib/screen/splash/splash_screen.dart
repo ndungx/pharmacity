@@ -7,6 +7,8 @@ import '../intro/introduction_screen.dart';
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
+  static String routeName = "/splash";
+
   @override
   State<SplashScreen> createState() => _SplashScreenState();
 }
