@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pharmacity/constants.dart';
+import 'package:pharmacity/screen/cart/cart_screen.dart';
+import 'package:pharmacity/screen/notification/notification_screen.dart';
 import 'package:pharmacity/screen/search/search_screen.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -44,9 +47,13 @@ class CustomAppBar extends StatelessWidget {
                         hintStyle: const TextStyle(
                           color: kSecondaryColor,
                         ),
-                        prefixIcon: const Icon(
-                          Icons.search,
-                          color: kSecondaryColor,
+                        prefixIcon: Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: SvgPicture.asset(
+                            'assets/icons/search.svg',
+                            color: kSecondaryColor,
+                            alignment: Alignment.center,
+                          ),
                         ),
                         filled: true,
                         fillColor: Colors.white,
@@ -71,31 +78,34 @@ class CustomAppBar extends StatelessWidget {
                 color: Colors.white,
               ),
               onPressed: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(
-                //     builder: (context) {
-                //       return const NotificationScreen();
-                //     },
-                //   ),
-                // );
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const NotificationScreen();
+                    },
+                  ),
+                );
               },
             ),
-            IconButton(
-              icon: const Icon(
-                Icons.shopping_cart_outlined,
-                color: Colors.white,
+            Padding(
+              padding: const EdgeInsets.all(12),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const CartScreen();
+                      },
+                    ),
+                  );
+                },
+                child: SvgPicture.asset(
+                  'assets/icons/cart.svg',
+                  height: 25,
+                  alignment: Alignment.center,
+                ),
               ),
-              onPressed: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(
-                //     builder: (context) {
-                //       return const CartScreen();
-                //     },
-                //   ),
-                // );
-              },
             ),
           ],
         ),
