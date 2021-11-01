@@ -19,7 +19,7 @@ class Body extends StatelessWidget {
               child: Container(
                 width: double.infinity,
                 height: MediaQuery.of(context).size.height -
-                    50 -
+                    24 -
                     AppBar().preferredSize.height,
                 color: Colors.white,
                 alignment: Alignment.topLeft,
