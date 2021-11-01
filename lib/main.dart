@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:pharmacity/routes.dart';
+import 'package:pharmacity/screen/home/home.dart';
 import 'package:pharmacity/screen/splash/splash_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SystemChrome.setPreferredOrientations(
+    [DeviceOrientation.portraitUp],
+  );
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
   runApp(const MyApp());
 }
 
@@ -17,7 +25,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SplashScreen(),
+      // home: const SplashScreen(),
+      // home: const Home(),
+      initialRoute: Home.routeName,
+      routes: routes,
     );
   }
 }
