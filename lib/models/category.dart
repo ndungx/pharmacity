@@ -11,7 +11,7 @@ class Category {
 class CategoryList {
   static final List<Category> category = [
     Category(
-      img: 'https://www.mmaglobal.com/files/logos/farma.png',
+      img: 'https://payoo.vn/v2/img/merchants/pharmacity.png',
       title: 'Nhãn hàng Pharmacity',
     ),
     Category(
