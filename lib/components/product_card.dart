@@ -57,14 +57,21 @@ class ProductCard extends StatelessWidget {
                     Stack(
                       children: [
                         Center(
-                          child: Hero(
-                            tag: heroTag + ' ' + product.id.toString(),
-                            child: Image.network(
-                              product.img[0],
-                              height: 100,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
+                          child: heroTag.compareTo('Sản phẩm cùng danh mục') ==
+                                  -1
+                              ? Hero(
+                                  tag: heroTag + ' ' + product.id.toString(),
+                                  child: Image.network(
+                                    product.img[0],
+                                    height: 100,
+                                    fit: BoxFit.cover,
+                                  ),
+                                )
+                              : Image.network(
+                                  product.img[0],
+                                  height: 100,
+                                  fit: BoxFit.cover,
+                                ),
                         ),
                         if (product.isDiscount ?? false)
                           product.discountPercent != null
