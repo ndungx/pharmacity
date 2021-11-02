@@ -32,36 +32,41 @@ class Body extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   product.isPharmacity ?? false
-                      ? ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Container(
-                            width: 145,
-                            color: kPrimaryColor.withOpacity(.2),
-                            child: Padding(
-                              padding: const EdgeInsets.all(5),
-                              child: Row(
-                                children: [
-                                  const Text(
-                                    'Thương hiệu',
-                                    style: TextStyle(
-                                      color: Color(0xFF6E6D6B),
-                                      fontSize: 11,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                      ? Column(
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(8),
+                              child: Container(
+                                width: 145,
+                                color: kPrimaryColor.withOpacity(.2),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(5),
+                                  child: Row(
+                                    children: [
+                                      const Text(
+                                        'Thương hiệu',
+                                        style: TextStyle(
+                                          color: Color(0xFF6E6D6B),
+                                          fontSize: 11,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      const SizedBox(width: 10),
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(50),
+                                        child: Image.asset(
+                                          'assets/images/pharmacity_logo.png',
+                                          width: 60,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      )
+                                    ],
                                   ),
-                                  const SizedBox(width: 10),
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(50),
-                                    child: Image.asset(
-                                      'assets/images/pharmacity_logo.png',
-                                      width: 60,
-                                      fit: BoxFit.cover,
-                                    ),
-                                  )
-                                ],
+                                ),
                               ),
                             ),
-                          ),
+                            const SizedBox(height: 10),
+                          ],
                         )
                       : const SizedBox(height: 15),
                   Text(
