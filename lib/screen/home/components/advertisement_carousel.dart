@@ -35,6 +35,7 @@ class _AdvertisementCarouselState extends State<AdvertisementCarousel> {
               viewportFraction: 1.0,
               enableInfiniteScroll: true,
               scrollDirection: Axis.horizontal,
+              enlargeCenterPage: true,
               onPageChanged: (index, reason) {
                 setState(() {
                   currentPage = index;
@@ -43,7 +44,10 @@ class _AdvertisementCarouselState extends State<AdvertisementCarousel> {
             ),
             items: imgList
                 .map(
-                  (item) => Image.network(item, fit: BoxFit.cover, width: 1000),
+                  (item) => ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.network(item, fit: BoxFit.cover, width: 1000),
+                  ),
                 )
                 .toList(),
           ),
