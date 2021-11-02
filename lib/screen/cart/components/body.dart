@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pharmacity/components/default_button.dart';
 import 'package:pharmacity/constants.dart';
 import 'package:pharmacity/models/cart.dart';
+import 'package:pharmacity/screen/home/home.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/src/provider.dart';
 
@@ -48,7 +49,7 @@ class Body extends StatelessWidget {
               height: 50,
               textColor: Colors.white,
               press: () {
-                Navigator.pop(context);
+                Navigator.pushNamed(context, Home.routeName);
               },
             ),
           ],
