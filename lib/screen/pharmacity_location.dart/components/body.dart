@@ -16,6 +16,7 @@ class Body extends StatelessWidget {
         children: [
           const PharmacityLocationBackground(),
           SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
             child: Container(
               margin: const EdgeInsets.only(top: 200),
               decoration: const BoxDecoration(
