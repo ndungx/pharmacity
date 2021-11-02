@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pharmacity/screen/cart/cart_screen.dart';
+import 'package:pharmacity/screen/home/home.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({Key? key}) : super(key: key);
@@ -23,9 +24,25 @@ class CustomAppBar extends StatelessWidget {
       ),
       backgroundColor: Colors.white,
       title: Center(
-        child: Image.asset(
-          'assets/images/pharmacity_logo.png',
-          height: 30,
+        child: Stack(
+          children: [
+            Image.asset(
+              'assets/images/pharmacity_logo.png',
+              height: 30,
+            ),
+            Positioned.fill(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Material(
+                  color: Colors.transparent,
+                  child: InkWell(
+                    splashColor: Colors.transparent,
+                    onTap: () => Navigator.pushNamed(context, Home.routeName),
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
       actions: [
