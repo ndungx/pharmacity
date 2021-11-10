@@ -13,7 +13,7 @@ class CheckTerm extends StatefulWidget {
 }
 
 class _CheckTermState extends State<CheckTerm> {
-  final _prefs = PreferencesSerice();
+  final _prefs = PreferencesService();
 
   late bool _accepted;
 
