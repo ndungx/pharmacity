@@ -12,7 +12,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  final _prefs = PreferencesSerice();
+  final _prefs = PreferencesService();
 
   late bool _isFirstTime = true;
 

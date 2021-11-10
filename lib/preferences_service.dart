@@ -1,6 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-class PreferencesSerice {
+class PreferencesService {
   Future setFirstTime(bool value) async {
     final preferences = await SharedPreferences.getInstance();
     await preferences.setBool('isfirstTime', value);
